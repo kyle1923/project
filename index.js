@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userCardContainer = document.querySelector("[data-user-cards-container]")
     const searchInput = document.querySelector("[data-search]")
 
-    let drink = [] 
+    let drink = []
     searchInput.addEventListener("input", e => {
         const value = e.target.value.toLowerCase()
 
@@ -27,34 +27,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 const body = card.querySelector("[data-body]")
                 const body1 = card.querySelector("[data-body1]")
                 const body2 = card.querySelector("[data-body2]")
-                
+
                 const image = card.querySelector("[image]")
-                const ing4 = user.strIngredient4
-                            
+
+
 
                 header.textContent = user.strDrink
                 body.textContent = user.strGlass
 
-                
-                     body2.textContent = user.strIngredient1 +" "+  user.strMeasure1 + ", " + user.strIngredient2 + " " + user.strMeasure2 + ", " + " " + user.strIngredient3 + " " + user.strMeasure3
-                    
+
+                body2.textContent = user.strIngredient1 + " " + user.strMeasure1 + ", " + user.strIngredient2 + " " + user.strMeasure2 + ", " + " " + user.strIngredient3 + " " + user.strMeasure3
+
                 body1.textContent = user.strInstructions
                 image.src = user.strDrinkThumb
+                header.addEventListener("mouseover", event => {
+                    if (event.target.style.color === "purple"){
+                        event.target.style.color = "black"
+                    } else {event.target.style.color = "purple"}
+                })
+            
 
-                
 
                 userCardContainer.append(card)
                 return {
                     strDrink: user.strDrink, strGlass: user.strGlass, strInstructions: user.strInstructions, strDrinkThumb: user.strDrinkThumb,
                     element: card
                 }
-                
-         
+
+
             })
-                
-            
-        })
 
         
+        })
+
+
+
 })
 
