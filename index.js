@@ -3,32 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userCardContainer = document.querySelector("[data-user-cards-container]")
     const searchInput = document.querySelector("[data-search]")
 
-    let drink = []
-    // let users = []
-    // searchInput.addEventListener("input", e => {
-    //     const value = e.target.value.toLowerCase()
-
-    //     users.forEach(user => {
-    //         const isVisible = 
-    //         user.name.toLowerCase().includes(value) || 
-    //         user.email.toLowerCase().includes(value)
-    //         user.element.classList.toggle("hide", !isVisible)
-    //     })
-    // })
-
-    // fetch("https://jsonplaceholder.typicode.com/users")
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         users = data.map(user => {
-    //             const card = userCardTemplate.content.cloneNode(true).children[0]
-    //             const header = card.querySelector("[data-header]")
-    //             const body = card.querySelector("[data-body]")
-    //             header.textContent = user.name
-    //             body.textContent = user.email
-    //             userCardContainer.append(card)
-    //             return { name: user.name, email: user.email, element: card }
-    //         })
-    //     })
+    let drink = [] 
     searchInput.addEventListener("input", e => {
         const value = e.target.value.toLowerCase()
 
@@ -55,10 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const image = card.querySelector("[image]")
                 const ing4 = user.strIngredient4
-               if (ing4 == " "){
-                return ing4 == " "
-               }
-               
+                            
 
                 header.textContent = user.strDrink
                 body.textContent = user.strGlass
