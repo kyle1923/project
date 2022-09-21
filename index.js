@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+    
     fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
 
         .then(res => res.json())
