@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         drink.forEach(user => {
             const isVisible =
                 user.strDrink.toLowerCase().includes(value) ||
-                user.strGlass.toLowerCase().includes(value)
+                user.strIngredient1.toLowerCase().includes(value)
             user.element.classList.toggle("hide", !isVisible)
         })
     })
@@ -51,13 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 userCardContainer.append(card)
                 return {
-                    strDrink: user.strDrink, strGlass: user.strGlass, strInstructions: user.strInstructions, strDrinkThumb: user.strDrinkThumb,
+                    strDrink: user.strDrink, strGlass: user.strGlass, strInstructions: user.strInstructions, strDrinkThumb: user.strDrinkThumb, strIngredient1: user.strIngredient1,
                     element: card
                 }
 
 
             })
-            
+            console.log("drink",drink)            
 
         })
         let drink1 = []
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         drink1.forEach(user => {
             const isVisible =
                 user.strDrink.toLowerCase().includes(value) ||
-                user.strGlass.toLowerCase().includes(value)
+                user.strIngredient1.toLowerCase().includes(value)
             user.element.classList.toggle("hide", !isVisible)
         })
     })
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 userCardContainer.append(card)
                 return {
-                    strDrink: user.strDrink, strGlass: user.strGlass, strInstructions: user.strInstructions, strDrinkThumb: user.strDrinkThumb,
+                    strDrink: user.strDrink, strGlass: user.strGlass, strInstructions: user.strInstructions, strDrinkThumb: user.strDrinkThumb, strIngredient1: user.strIngredient1,
                     element: card
                 }
 
