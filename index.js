@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener("input", e => {
         const value = e.target.value.toLowerCase()
 
-        
         drink.forEach(user => {
             const isVisible =
                 user.strDrink.toLowerCase().includes(value) ||
